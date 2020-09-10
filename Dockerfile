@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+COPY sources.list /etc/apt/sources.list 
 RUN apt-get update
 RUN apt-get install -y python2.7 python-pip
 
